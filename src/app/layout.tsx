@@ -1,30 +1,71 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
+import type { Metadata } from 'next'
+import localFont from 'next/font/local'
+import './globals.css'
+
+import Navbar from '@/app/components/Navbar'
 
 const biotif = localFont({
-  src: "./fonts/Biotif-RegularItalic.woff2",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
+  variable: '--font-body',
+  src: [
+    {
+      path: './fonts/Biotif/Biotif-Regular.woff2',
+      weight: 'normal',
+      style: 'bold',
+    },
+    {
+      path: './fonts/Biotif/Biotif-Bold.woff2',
+      weight: 'bold',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Biotif/Biotif-RegularItalic.woff2',
+      weight: 'normal',
+      style: 'italic',
+    },
+    {
+      path: './fonts/Biotif/Biotif-Book.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+  ],
+})
+
+const neuzeitGrotesk = localFont({
+  variable: '--font-heading',
+  src: './fonts/NeuzeitGrotesk/NeuzeitGrotesk-Bold.woff2',
+  style: 'normal',
+  weight: 'bold',
+})
+
+// TODO: colocar fonte
+const firaCode = localFont({
+  variable: '--font-code',
+  src: './fonts/NeuzeitGrotesk/NeuzeitGrotesk-Bold.woff2',
+  style: 'normal',
+  weight: 'normal',
+})
 
 export const metadata: Metadata = {
-  title: "Victor Santos",
-  description: "Programming goes far beyond syntax.",
-};
+  title: 'Victor Santos',
+  description: 'Programming goes far beyond syntax.',
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en">
-      <body className={`${biotif.variable} antialiased`}>
-        <div className="max-w-[760px] bg-blue-100 ml-auto mr-auto">
+      <body
+        className={`${biotif.variable} ${neuzeitGrotesk.variable} ${firaCode.variable} antialiased min-h-screen bg-background`}
+      >
+        <div className="max-w-[760px] ml-auto mr-auto">
+          <Navbar />
+
           {children}
         </div>
       </body>
     </html>
-  );
+  )
 }
