@@ -5,15 +5,15 @@
     @apply font-heading text-primary;
   }
   h1 {
-    @apply text-2xl;
+    @apply text-4xl;
   }
   h2 {
-    @apply text-xl;
+    @apply text-2xl;
   }
   h3 {
     @apply text-lg;
   }
-  p, a {
+  p, a, b {
     @apply text-base font-body;
   }
   p {
@@ -21,6 +21,12 @@
   }
   a {
     @apply text-primary underline cursor-pointer;
+  }
+  b, strong {
+    @apply text-primary;
+  }
+  strong {
+    @apply font-medium;
   }
 }
 

@@ -1,8 +1,6 @@
-import Image from 'next/image'
-
 export default function Home() {
   return (
-    <div>
+    <div className="pt-20">
       <h1>Heading</h1>
       <p>
         <a>oi</a>Text

@@ -6,14 +6,14 @@ export default function Footer() {
       icon: 'ri-mail-line',
     },
     {
-      title: 'GitHub',
-      url: 'https://github.com/tilnoene',
-      icon: 'ri-github-line',
-    },
-    {
       title: 'LinkedIn',
       url: 'https://linkedin.com/in/victor-manuel-brito-santos',
       icon: 'ri-linkedin-line',
+    },
+    {
+      title: 'GitHub',
+      url: 'https://github.com/tilnoene',
+      icon: 'ri-github-line',
     },
     {
       title: 'Instagram',
@@ -22,5 +22,22 @@ export default function Footer() {
     },
   ]
 
-  return <footer>tmp</footer>
+  return (
+    <footer className="w-full h-14 mt-auto flex justify-center items-center">
+      <ul className="flex gap-5">
+        {links.map(link => (
+          <li key={link.title}>
+            <a
+              href={link.url}
+              target="_blank"
+              rel="noreferrer"
+              className="text-secondary lowercase font-body no-underline hover:underline underline-offset-2"
+            >
+              {link.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </footer>
+  )
 }

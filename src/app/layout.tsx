@@ -3,6 +3,7 @@ import localFont from 'next/font/local'
 import './globals.css'
 
 import Navbar from '@/app/components/Navbar'
+import Footer from '@/app/components/Footer'
 
 const biotif = localFont({
   variable: '--font-body',
@@ -60,10 +61,12 @@ export default function RootLayout({
       <body
         className={`${biotif.variable} ${neuzeitGrotesk.variable} ${firaCode.variable} antialiased min-h-screen bg-background`}
       >
-        <div className="max-w-[760px] ml-auto mr-auto">
+        <div className="max-w-[760px] ml-auto mr-auto min-h-screen flex flex-col">
           <Navbar />
 
           {children}
+
+          <Footer />
         </div>
       </body>
     </html>
