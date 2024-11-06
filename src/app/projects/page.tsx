@@ -1,5 +1,7 @@
-import Card from '@/app/components/Card'
 import GradientTitle from '@/app/components/GradientTitle'
+import ProjectPreview from '@/app/components/ProjectPreview'
+
+import { featuredProjects, projects, Project } from '@/app/data/projects'
 
 export default function Projects() {
   return (
@@ -10,7 +12,11 @@ export default function Projects() {
         </GradientTitle>
 
         <p>
-          Here you can see <strong>{13} different projects</strong> I built.
+          Here you can see{' '}
+          <strong>
+            {featuredProjects.length + projects.length} different projects
+          </strong>{' '}
+          I built.
         </p>
       </div>
 
@@ -18,14 +24,20 @@ export default function Projects() {
         <h2 className="mb-2">Featured Projects</h2>
 
         <div className="flex justify-between">
-          <Card />
-          <Card />
-          <Card />
+          {featuredProjects.map((project: Project) => (
+            <ProjectPreview project={project} key={project.name} />
+          ))}
         </div>
       </div>
 
       <div>
-        <h2>All Projects</h2>
+        <h2 className="mb-2">All Projects</h2>
+
+        <div className="flex flex-wrap justify-start gap-1">
+          {projects.map((project: Project) => (
+            <ProjectPreview project={project} key={project.name} />
+          ))}
+        </div>
       </div>
     </div>
   )
