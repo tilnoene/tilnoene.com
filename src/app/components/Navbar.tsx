@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
-  const pages = ['Home', 'About', 'Articles', 'Projects', 'Uses', 'Contact']
+  const pages = ['Home', 'About', 'Posts', 'Projects', 'Tools', 'Contact']
   const currentPathname = usePathname()
 
   return (

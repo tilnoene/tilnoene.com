@@ -23,7 +23,7 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="w-full h-14 mt-auto flex justify-center items-center">
+    <footer className="w-full h-14 flex justify-center items-center mt-24">
       <ul className="flex gap-5">
         {links.map(link => (
           <li key={link.title}>
@@ -31,7 +31,7 @@ export default function Footer() {
               href={link.url}
               target="_blank"
               rel="noreferrer"
-              className="text-secondary lowercase font-body no-underline hover:underline underline-offset-2"
+              className="text-secondary lowercase font-body no-underline hover:underline hover:text-primary underline-offset-2"
             >
               {link.title}
             </a>
