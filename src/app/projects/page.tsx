@@ -1,3 +1,4 @@
+import Card from '@/app/components/Card'
 import GradientTitle from '@/app/components/GradientTitle'
 
 export default function Projects() {
@@ -14,7 +15,13 @@ export default function Projects() {
       </div>
 
       <div className="my-10">
-        <h2>Featured Projects</h2>
+        <h2 className="mb-2">Featured Projects</h2>
+
+        <div className="flex justify-between">
+          <Card />
+          <Card />
+          <Card />
+        </div>
       </div>
 
       <div>

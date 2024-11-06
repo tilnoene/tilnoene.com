@@ -88,7 +88,7 @@ export default function About() {
 
           <div className="flex flex-col gap-6">
             {education.map((education: Education) => (
-              <div>
+              <div key={education.title.concat(education.universityName)}>
                 <h3>{education.title}</h3>
                 <div className="[&_*]:text-sm">
                   <p className="mb-1">
@@ -127,7 +127,7 @@ export default function About() {
 
           <div className="flex flex-col gap-6">
             {jobs.map((job: Job) => (
-              <div>
+              <div key={job.title.concat(job.company)}>
                 <h3>{job.title}</h3>
                 <div className="[&_*]:text-sm">
                   <p className="mb-1">
@@ -159,7 +159,7 @@ export default function About() {
 
             <div className="flex flex-col gap-6">
               {awards.map((award: Award) => (
-                <div>
+                <div key={award.title.concat(award.competition)}>
                   <h3
                     className={
                       award.title === 'Silver Medal'
