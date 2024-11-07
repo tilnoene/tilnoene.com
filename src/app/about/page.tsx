@@ -45,27 +45,37 @@ export default function About() {
         Programming goes far beyond syntax
       </GradientTitle>
 
-      <div className="flex gap-8">
+      <div className="flex gap-8 flex-wrap md:flex-nowrap">
         <Image
-          width={333}
-          height={333}
           src={profileImage}
           alt="Victor Santos profile picture"
-          className="rounded-lg"
+          className="rounded-lg h-[344px] w-[344px]"
           priority
           // placeholder="blur"
           // blurDataURL="" TODO: colocar 10px or less image base64
         />
 
-        <div>
+        <div className="[&_*]:leading-7">
           <p>
-            <strong>Hey, I'm Victor Santos!</strong> I started programming in
-            2019, etc
+            <strong>Hey, I'm Victor Santos!</strong> I started programming at
+            the age of 14 by <strong>creating mods</strong> for games, which
+            introduced me to the world of coding.
           </p>
 
           <br />
 
-          <p>OBI Medalist and ICPC Finalist</p>
+          <p>
+            In 2020, I began dedicating myself exclusively to{' '}
+            <strong>computer science</strong>, developing skills in software
+            development and competitive programming.
+          </p>
+
+          <br />
+
+          <p>
+            I am also a <strong>finalist</strong> in the Brazilian Olympiad in
+            Informatics (OBI) and the ICPC Brazil Subregionals.
+          </p>
 
           <br />
 
