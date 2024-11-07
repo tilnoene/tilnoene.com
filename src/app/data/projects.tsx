@@ -98,7 +98,7 @@ export const projects: Project[] = [
   },
   {
     name: 'PetGato',
-    description: 'Blog for a veterinarian, sharing pet care tips.',
+    description: 'Blog by a veterinarian, sharing pet care tips.',
     icon: <IoPawOutline size={32} />,
     sourceUrl: 'https://petgato-git-develop-tilnoene.vercel.app/erro',
   },
@@ -141,14 +141,14 @@ export const projects: Project[] = [
   },
   {
     name: 'Way of the Exploding Fist',
-    description: 'Recreation of this game in assembly language.',
+    description: 'Recreation of an arcade game in assembly language.',
     icon: <TbDeviceGamepad size={32} />,
     sourceUrl: 'https://github.com/marcelomamorim/RISC-V-assembly-game',
   },
 
   {
     name: 'Guess the Lyrics',
-    description: 'Fill in the random missing words of a song.',
+    description: 'Listen to a song and fill in the random missing words.',
     icon: <TbMicrophone2 size={32} />,
     sourceUrl: 'https://github.com/tilnoene/guess-the-lyrics',
   },
