@@ -61,7 +61,7 @@ export default function RootLayout({
       <body
         className={`${biotif.variable} ${neuzeitGrotesk.variable} ${firaCode.variable} antialiased min-h-screen bg-background`}
       >
-        <div className="max-w-[760px] ml-auto mr-auto min-h-screen flex flex-col">
+        <div className="max-w-[calc(760px+2*20px)] px-[20px] ml-auto mr-auto min-h-screen flex flex-col">
           <Navbar />
 
           {children}
