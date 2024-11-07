@@ -20,12 +20,12 @@ export default function Projects() {
 
       <div className="mt-10 flex flex-col gap-6">
         {categories.map((category: Category) => (
-          <div>
+          <div key={category.name}>
             <h2>{category.name}</h2>
 
             <ul>
               {category.items.map((item: Item) => (
-                <li>
+                <li key={item.title}>
                   <p>
                     <a href={item.url} target="_blank" rel="noreferrer">
                       {item.title}
