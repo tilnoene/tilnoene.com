@@ -8,7 +8,7 @@ export default function Navbar() {
   const currentPathname = usePathname()
 
   return (
-    <div className="mb-12">
+    <div className="pl-2 mb-12 max-h-full overflow-x-scroll">
       <header>
         <nav className="w-full">
           <ul className="flex gap-12 w-fit ml-auto mr-auto py-3">
