@@ -5,7 +5,7 @@ import { featuredProjects, projects, Project } from '@/app/data/projects'
 
 export default function Projects() {
   return (
-    <div>
+    <div className="flex-1">
       <div>
         <GradientTitle className="from-cyan to-green mb-2">
           Work, Hobby & Open Source

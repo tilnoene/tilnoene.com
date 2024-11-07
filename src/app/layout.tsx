@@ -60,8 +60,18 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${biotif.variable} ${neuzeitGrotesk.variable} ${firaCode.variable} antialiased min-h-screen bg-background`}
+        // style={{
+        //   backgroundImage:
+        //     'linear-gradient(to bottom, transparent 98%, #212024 98%), linear-gradient(to right, #08070b 98%, #212024 98%)',
+        //   backgroundSize: '96px 96px, 96px 96px',
+        // }}
       >
-        <div className="max-w-[calc(760px+2*20px)] px-[20px] ml-auto mr-auto min-h-screen flex flex-col">
+        <div
+          className="max-w-[calc(760px+2*20px)] px-[20px] ml-auto mr-auto min-h-screen flex flex-col bg-background"
+          style={{
+            boxShadow: '0px 0px 620px 210px rgba(8,7,11,0.9)',
+          }}
+        >
           <Navbar />
 
           {children}

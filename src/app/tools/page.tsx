@@ -4,7 +4,7 @@ import { categories, Category, Item } from '@/app/data/tools'
 
 export default function Projects() {
   return (
-    <div>
+    <div className="flex-1">
       <div>
         <GradientTitle className="from-orange to-yellow mb-2">
           Tools, Apps & Gear

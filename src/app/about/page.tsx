@@ -40,7 +40,7 @@ export default function About() {
   }
 
   return (
-    <div>
+    <div className="flex-1">
       <GradientTitle className="from-pink to-purple mb-5">
         Programming goes far beyond syntax
       </GradientTitle>
