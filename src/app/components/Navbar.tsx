@@ -13,7 +13,7 @@ export default function Navbar() {
         <nav className="w-full">
           <ul className="flex gap-12 w-fit ml-auto mr-auto py-3">
             {pages.map(page => {
-              const path = `/${page.toLowerCase()}`
+              const path = page === 'Home' ? '/' : `/${page.toLowerCase()}`
 
               return (
                 <li key={page}>

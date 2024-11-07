@@ -16,14 +16,15 @@ export default function Projects() {
           <strong>
             {featuredProjects.length + projects.length} different projects
           </strong>{' '}
-          I built.
+          I built. Feel free to <strong>click</strong> and see more information
+          about each one.
         </p>
       </div>
 
       <div className="my-10">
-        <h2 className="mb-2">Featured Projects</h2>
+        <h2 className="mb-1">Featured Projects</h2>
 
-        <div className="flex justify-between">
+        <div className="flex flex-wrap gap-2 ml-[-20px]">
           {featuredProjects.map((project: Project) => (
             <ProjectPreview project={project} key={project.name} />
           ))}
@@ -33,7 +34,7 @@ export default function Projects() {
       <div>
         <h2 className="mb-2">All Projects</h2>
 
-        <div className="flex flex-wrap justify-start gap-1">
+        <div className="flex flex-wrap justify-start gap-2 ml-[-20px]">
           {projects.map((project: Project) => (
             <ProjectPreview project={project} key={project.name} />
           ))}

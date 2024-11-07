@@ -5,7 +5,7 @@ export default function Card() {
 
       <h1 className="text-xl mt-3">Title</h1>
 
-      <p>Temp temp temp temp temp temp</p>
+      <p>Description</p>
     </div>
   )
 }

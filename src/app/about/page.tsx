@@ -1,5 +1,8 @@
 import Image from 'next/image'
 import { parseISO, format, intervalToDuration } from 'date-fns'
+import { FaLinkedin } from 'react-icons/fa'
+import { FaGithub } from 'react-icons/fa'
+import { HiOutlineDocumentText } from 'react-icons/hi'
 
 import GradientTitle from '@/app/components/GradientTitle'
 
@@ -12,6 +15,7 @@ import {
   jobs,
 } from '@/app/data/about'
 import profileImage from '@/app/assets/victor-computador.jpg'
+import Button from '@/app/components/Button'
 
 export default function About() {
   const getDuration = (startDate: string, endDate: string) => {
@@ -23,13 +27,13 @@ export default function About() {
     let durationStr = ''
 
     if (durationObj.years !== undefined && durationObj.years > 1) {
-      durationStr = `${durationObj.years} yrs `
+      durationStr = `${durationObj.years} yrs`
     } else if (durationObj.years === 1) {
-      durationStr = `${durationObj.years} yr `
+      durationStr = `${durationObj.years} yr`
     }
 
     if (durationObj.months !== undefined && durationObj.months > 0) {
-      durationStr += `${durationObj.months} mos`
+      durationStr += ` ${durationObj.months} mos`
     }
 
     return durationStr
@@ -72,14 +76,46 @@ export default function About() {
         </div>
       </div>
 
-      <div className="flex gap-8 my-6">
-        <p>Resume</p>
+      <div className="flex gap-2 mt-4 items-center ml-[-14px]">
+        <a
+          href="/files/resume.pdf"
+          target="_blank"
+          // rel="noreferrer"
+          className="no-underline"
+        >
+          <Button>
+            <HiOutlineDocumentText size={24} />
+            <span className="mt-1">Resume</span>
+          </Button>
+        </a>
 
-        <p>LinkedIn</p>
+        <p>•</p>
 
-        <p>GitHub</p>
+        <a
+          href="https://www.linkedin.com/in/victor-manuel-brito-santos/"
+          target="_blank"
+          rel="noreferrer"
+          className="no-underline"
+        >
+          <Button>
+            <FaLinkedin size={24} />
+            <span className="mt-1">LinkedIn</span>
+          </Button>
+        </a>
 
-        <p>Contact</p>
+        <p>•</p>
+
+        <a
+          href="https://github.com/tilnoene"
+          target="_blank"
+          rel="noreferrer"
+          className="no-underline"
+        >
+          <Button>
+            <FaGithub size={24} />
+            <span className="mt-1">GitHub</span>
+          </Button>
+        </a>
       </div>
 
       <div className="mt-8 flex flex-col gap-9">
