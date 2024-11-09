@@ -4,14 +4,22 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
-  const pages = ['Home', 'About', 'Posts', 'Projects', 'Tools', 'Contact']
+  const pages = [
+    'Home',
+    'About',
+    'Posts',
+    'Projects',
+    'Tools',
+    'Reminder',
+    'Contact',
+  ]
   const currentPathname = usePathname()
 
   return (
     <div className="pl-2 mb-12 max-h-full overflow-x-scroll">
       <header>
         <nav className="w-full">
-          <ul className="flex gap-12 w-fit ml-auto mr-auto py-3">
+          <ul className="flex gap-4 w-fit ml-auto mr-auto py-3">
             {pages.map(page => {
               const path = page === 'Home' ? '/' : `/${page.toLowerCase()}`
 
@@ -20,16 +28,18 @@ export default function Navbar() {
                   <Link
                     href={path}
                     passHref
-                    className={`uppercase font-body no-underline text-xs text-secondary transition-color ${
+                    className={`relative uppercase hover:bg-hover transition-colors py-3 px-4 rounded font-body no-underline text-xs text-secondary transition-color ${
                       currentPathname === path
                         ? '[&_span]:text-primary underline'
-                        : '' // TODO: transition
+                        : ''
                     }`}
                   >
                     <span>{page}</span>
 
                     {currentPathname === path && (
-                      <div className="w-5 h-[1px] mt-0.5 bg-primary ml-auto mr-auto" />
+                      <div className="absolute w-full h-[1px] mt-0.5 flex justify-center">
+                        <div className="w-5 h-[1px] bg-primary" />
+                      </div>
                     )}
                   </Link>
                 </li>
