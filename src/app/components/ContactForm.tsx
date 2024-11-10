@@ -14,20 +14,39 @@ export default function ContactForm() {
   const [message, setMessage] = useState<string>('')
 
   function handleSendEmail() {
-    sendEmail()
+    // TODO: validate data, throw errors. validate on submit is better, and then show the error message!
+
+    sendEmail() // is there a way to check if there are errors on this? like, how to show
   }
 
   return (
-    <form>
-      <Input value={name} setValue={setName} />
-      <Input value={email} setValue={setEmail} />
-      <Input value={message} setValue={setMessage} />
+    <form className="flex flex-col gap-5">
+      <Input
+        label="Name"
+        placeholder="Victor Santos"
+        maxLength={128}
+        value={name}
+        setValue={setName}
+      />
+      <Input
+        label="Email"
+        placeholder="mbvictorsantos@gmail.com"
+        maxLength={128}
+        value={email}
+        setValue={setEmail}
+      />
+      <Input
+        label="Message"
+        placeholder="How can I help you?"
+        maxLength={1024}
+        multiline
+        value={message}
+        setValue={setMessage}
+      />
 
       <Button
-        onClick={(e: any) => {
-          // TODO: tipar
+        onClick={(e: React.MouseEvent<HTMLElement>) => {
           e.preventDefault()
-          console.log('clicou')
           handleSendEmail()
         }}
         type="submit"

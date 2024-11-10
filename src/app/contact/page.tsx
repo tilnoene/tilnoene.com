@@ -5,15 +5,15 @@ export default function Contact() {
   return (
     <div className="flex-1">
       <div>
-        <GradientTitle className="from-sky-500 to-purple mb-2">
+        <GradientTitle className="from-cyan to-green mb-2">
           Send me an email.
         </GradientTitle>
 
         <p>Like in the old days.</p>
       </div>
 
-      <div className="mt-10">
-        <h2>Send an email</h2>
+      <div className="mt-7">
+        {/* <h2 className="mb-2">Send an email</h2> */}
 
         <ContactForm />
       </div>
