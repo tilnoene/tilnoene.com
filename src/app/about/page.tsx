@@ -208,7 +208,7 @@ export default function About() {
                 <div key={award.title.concat(award.competition)}>
                   <h3
                     className={
-                      award.title === 'Silver Medal'
+                      award.title === 'Silver Medal 2'
                         ? `bg-gradient-to-r from-secondary to-primary`
                         : 'bg-primary'
                     }

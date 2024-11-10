@@ -69,19 +69,19 @@ export const awards: Award[] = [
   {
     title: "Silver Medal",
     competition: "Brazilian Olympiad in Informatics (OBI)",
-    competitionUrl: "TODO",
+    competitionUrl: "https://olimpiada.ic.unicamp.br/",
     date: "2021"
   },
   {
-    title: "Brazil ICPC Subregionals",
-    competition: "ICPC",
-    competitionUrl: "TODO",
+    title: "Participation on ICPC Brazil Subregionals",
+    competition: "International Collegiate Programming Contest (ICPC)",
+    competitionUrl: "https://icpc.global",
     date: "2020 – 2024",
   },
   {
     title: "Bronze Medal",
     competition: "Brazilian Mathematics Olympiad (OBMEP)",
-    competitionUrl: "TODO",
+    competitionUrl: "http://obmep.org.br/",
     date: "2019"
   },
 ]
