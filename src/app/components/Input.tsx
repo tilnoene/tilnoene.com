@@ -5,6 +5,7 @@ export default function Input({
   placeholder = '',
   multiline = false,
   maxLength = 128,
+  type = 'text',
 }: {
   value: string
   setValue: (newValue: string) => void
@@ -12,6 +13,7 @@ export default function Input({
   placeholder?: string
   multiline?: boolean
   maxLength?: number
+  type?: 'text' | 'email'
 }) {
   function handleSetValue(newValue: string) {
     setValue(newValue)
@@ -31,7 +33,7 @@ export default function Input({
           cols={40}
           rows={7}
           className="
-            w-80 text-primary p-3 outline-none rounded-xl placeholder-secondary
+            w-full max-w-80 text-primary p-3 outline-none rounded-xl placeholder-secondary
             bg-[linear-gradient(#08070b,_#08070b),_radial-gradient(circle_at_top_left,_#f2f2f2,_#f2f2f2)]
             focus:bg-[linear-gradient(#08070b,_#08070b),_radial-gradient(circle_at_top_left,_#80ffea,_#8aff80)]
           "
@@ -52,7 +54,7 @@ export default function Input({
       ) : (
         <input
           className="
-            w-80 text-primary p-3 outline-none rounded-xl placeholder-secondary
+            w-full max-w-80 text-primary p-3 outline-none rounded-xl placeholder-secondary
             bg-[linear-gradient(#08070b,_#08070b),_radial-gradient(circle_at_top_left,_#f2f2f2,_#f2f2f2)]
             focus:bg-[linear-gradient(#08070b,_#08070b),_radial-gradient(circle_at_top_left,_#80ffea,_#8aff80)]
           "
@@ -61,7 +63,7 @@ export default function Input({
             backgroundOrigin: 'border-box',
             backgroundClip: 'padding-box, border-box',
           }}
-          type="text"
+          type={type}
           maxLength={maxLength}
           name={label}
           id={label}

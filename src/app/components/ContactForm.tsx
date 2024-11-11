@@ -15,8 +15,7 @@ export default function ContactForm() {
 
   function handleSendEmail() {
     // TODO: validate data, throw errors. validate on submit is better, and then show the error message!
-
-    sendEmail() // is there a way to check if there are errors on this? like, how to show
+    // sendEmail() // is there a way to check if there are errors on this? like, how to show
   }
 
   return (
@@ -28,13 +27,16 @@ export default function ContactForm() {
         value={name}
         setValue={setName}
       />
+
       <Input
         label="Email"
+        type="email"
         placeholder="mbvictorsantos@gmail.com"
         maxLength={128}
         value={email}
         setValue={setEmail}
       />
+
       <Input
         label="Message"
         placeholder="How can I help you?"
@@ -50,6 +52,7 @@ export default function ContactForm() {
           handleSendEmail()
         }}
         type="submit"
+        className="w-fit"
       >
         <b>Send</b>
         <FaArrowRight />
