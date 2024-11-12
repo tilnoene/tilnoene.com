@@ -3,8 +3,6 @@
 import { Resend } from 'resend'
 
 export default async function sendEmail(name: string, email: string, message: string) {
-  return new Promise(resolve => setTimeout(resolve, 3000));
-
   const resend = new Resend(process.env.RESEND_API_KEY)
 
   if (process.env.RESEND_FROM_EMAIL && process.env.RESEND_TO_EMAIL) {
