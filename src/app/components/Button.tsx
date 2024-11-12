@@ -6,7 +6,7 @@ export default function Button({
 }: {
   children: JSX.Element | JSX.Element[] | string
   className?: string
-  onClick?: any // TODO: tipar
+  onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined
   type?: 'button' | 'submit' | 'reset'
 }) {
   return (

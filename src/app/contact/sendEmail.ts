@@ -3,10 +3,12 @@
 import { Resend } from 'resend'
 
 export default async function sendEmail(name: string, email: string, message: string) {
+  return new Promise(resolve => setTimeout(resolve, 3000));
+
   const resend = new Resend(process.env.RESEND_API_KEY)
 
   if (process.env.RESEND_FROM_EMAIL && process.env.RESEND_TO_EMAIL) {
-    resend.emails.send({
+    return resend.emails.send({
       from: process.env.RESEND_FROM_EMAIL,
       to: process.env.RESEND_TO_EMAIL,
       subject: 'Contato pelo site',
@@ -18,6 +20,6 @@ export default async function sendEmail(name: string, email: string, message: st
             </div>`,
     })
   } else {
-    console.error("Missing enviroment variables RESEND_FROM_EMAIL and/or RESEND_TO_EMAIL");
+    throw new Error("Missing enviroment variables RESEND_FROM_EMAIL and/or RESEND_TO_EMAIL")
   }
 }
