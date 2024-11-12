@@ -35,7 +35,7 @@ export const featuredProjects: Project[] = [
     description: 'A ranking for competitive programmers.',
     slug: '50+ users',
     icon: <PiTrophy size={32} />,
-    sourceUrl: 'https://github.com/tilnoene/unballoon-ranking',
+    sourceUrl: 'https://unballoon.vercel.app',
   },
   {
     name: 'Automatic Brooder',
@@ -64,7 +64,7 @@ export const projects: Project[] = [
     name: 'Celeste',
     description: 'Recreation of the Celeste game in assembly language.',
     icon: <PiMountains size={32} />,
-    sourceUrl: 'https://github.com/tilnoene/chocadeira',
+    sourceUrl: 'https://github.com/tilnoene/celeste',
   },
   {
     name: 'Repet',
@@ -94,15 +94,14 @@ export const projects: Project[] = [
     name: 'Mashup Builder',
     description: 'Selects random Codeforces problems by rating.',
     icon: <GoGear size={32} />,
-    sourceUrl: 'https://github.com/tilnoene/chocadeira',
+    sourceUrl: 'https://mashupbuilder.vercel.app',
   },
   {
     name: 'PetGato',
     description: 'Blog by a veterinarian, sharing pet care tips.',
     icon: <IoPawOutline size={32} />,
-    sourceUrl: 'https://petgato-git-develop-tilnoene.vercel.app/erro',
+    sourceUrl: 'https://petgato-git-develop-tilnoene.vercel.app',
   },
-
   {
     name: 'UaiFood',
     description: 'Simplified version of a food delivery app.',
@@ -116,7 +115,7 @@ export const projects: Project[] = [
     sourceUrl: 'https://speedcalc.vercel.app/',
   },
   {
-    name: 'ChaTil',
+    name: 'Chat',
     description: 'Real time chat using websocket.',
     icon: <PiChatText size={32} />,
     sourceUrl: 'https://github.com/tilnoene/chat',
@@ -150,13 +149,13 @@ export const projects: Project[] = [
     name: 'Guess the Lyrics',
     description: 'Listen to a song and fill in the random missing words.',
     icon: <TbMicrophone2 size={32} />,
-    sourceUrl: 'https://github.com/tilnoene/guess-the-lyrics',
+    sourceUrl: 'https://guess-the-music-lyrics.vercel.app/',
   },
   {
     name: 'Pokemon Quiz',
     description: "Who's That Pokémon? Guess it from a silhouette.",
     icon: <TbPokeball size={32} />,
-    sourceUrl: 'https://github.com/tilnoene/pokemon-quiz',
+    sourceUrl: 'https://pokemonquiz-git-main-tilnoene.vercel.app/',
   },
   {
     name: 'Cassette Tape',

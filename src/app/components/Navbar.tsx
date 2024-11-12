@@ -7,8 +7,8 @@ export default function Navbar() {
   const pages = [
     'Home',
     'About',
-    'Posts',
     'Projects',
+    'Posts',
     'Tools',
     'Reminder',
     'Contact',
