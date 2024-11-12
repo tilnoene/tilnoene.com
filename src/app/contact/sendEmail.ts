@@ -2,13 +2,22 @@
 
 import { Resend } from 'resend'
 
-export default async function sendEmail() {
+export default async function sendEmail(name: string, email: string, message: string) {
   const resend = new Resend(process.env.RESEND_API_KEY)
 
-  resend.emails.send({
-    from: 'onboarding@resend.dev',
-    to: 'mbvictorsantos@gmail.com',
-    subject: 'Contato pelo site',
-    html: '<p>A nathalia eh muito chata</p>',
-  })
+  if (process.env.RESEND_FROM_EMAIL && process.env.RESEND_TO_EMAIL) {
+    resend.emails.send({
+      from: process.env.RESEND_FROM_EMAIL,
+      to: process.env.RESEND_TO_EMAIL,
+      subject: 'Contato pelo site',
+      html: `<div>
+              <p>De: ${name}</p>
+              <p>Email: ${email}</p>
+              <br />
+              <p>${message}</p>
+            </div>`,
+    })
+  } else {
+    console.error("Missing enviroment variables RESEND_FROM_EMAIL and/or RESEND_TO_EMAIL");
+  }
 }
