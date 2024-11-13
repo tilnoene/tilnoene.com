@@ -6,7 +6,7 @@ export default function Contact() {
     <div className="flex-1">
       <div>
         <GradientTitle className="from-cyan to-green mb-2">
-          Send me an email.
+          Send me an email
         </GradientTitle>
 
         <p>Like in the old days.</p>

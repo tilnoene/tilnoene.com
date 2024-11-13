@@ -11,10 +11,10 @@ export default function Projects() {
         </GradientTitle>
 
         <p>
-          I often get messages asking about specific pieces of{' '}
-          <strong>software or hardware I use</strong>. This is not a static
-          page, it's a <strong>living document</strong> with everything that I'm
-          using nowadays.
+          {/* I often get messages asking about specific pieces of{' '}
+          <strong>software or hardware I use</strong>. */}
+          This is not a static page, it's a <strong>living document</strong>{' '}
+          with everything that I'm using nowadays.
         </p>
       </div>
 
@@ -30,7 +30,9 @@ export default function Projects() {
                     <a href={item.url} target="_blank" rel="noreferrer">
                       {item.title}
                     </a>{' '}
-                    <span>- {item.description}</span>
+                    {item.description !== '' && (
+                      <span>- {item.description}</span>
+                    )}
                   </p>
                 </li>
               ))}

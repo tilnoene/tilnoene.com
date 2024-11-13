@@ -10,7 +10,7 @@ export default function Navbar() {
     'Projects',
     'Posts',
     'Tools',
-    'Reminder',
+    // 'Reminder',
     'Contact',
   ]
   const currentPathname = usePathname()
