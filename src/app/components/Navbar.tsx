@@ -8,7 +8,7 @@ export default function Navbar() {
     'Home',
     'About',
     'Projects',
-    'Posts',
+    'Blog',
     'Tools',
     // 'Reminder',
     'Contact',
