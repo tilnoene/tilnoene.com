@@ -16,7 +16,7 @@ export default function Navbar() {
   const currentPathname = usePathname()
 
   return (
-    <div className="pl-2 mb-12 max-h-full overflow-x-scroll">
+    <div className="pl-2 mb-12 max-h-full overflow-x-scroll no-scrollbar">
       <header>
         <nav className="w-full">
           <ul className="flex gap-4 w-fit ml-auto mr-auto py-3">
@@ -24,24 +24,24 @@ export default function Navbar() {
               const path = page === 'Home' ? '/' : `/${page.toLowerCase()}`
 
               return (
-                <li key={page}>
+                <li key={page} className="hover:bg-hover transition-colors py-3 px-4 rounded cursor-pointer flex items-center relative">
                   <Link
                     href={path}
                     passHref
-                    className={`relative uppercase hover:bg-hover transition-colors py-3 px-4 rounded font-body no-underline text-xs text-secondary transition-color ${
+                    className={`uppercase font-body no-underline text-xs mt-0.5 ${
                       currentPathname === path
-                        ? '[&_span]:text-primary underline'
-                        : ''
+                        ? 'text-primary'
+                        : 'text-secondary'
                     }`}
                   >
-                    <span>{page}</span>
-
-                    {currentPathname === path && (
-                      <div className="absolute w-full h-[1px] mt-0.5 flex justify-center">
-                        <div className="w-5 h-[1px] bg-primary" />
-                      </div>
-                    )}
+                    {page}
                   </Link>
+
+                  {currentPathname === path && (
+                    <div className="absolute w-full h-[1px] bottom-1.5 left-0 flex justify-center">
+                      <div className="w-5 h-[1px] bg-primary" />
+                    </div>
+                  )}
                 </li>
               )
             })}
