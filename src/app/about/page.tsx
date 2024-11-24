@@ -88,7 +88,7 @@ export default function About() {
 
       <div className="flex gap-2 mt-4 items-center ml-[-14px]">
         <a
-          href="/files/Currículo Victor Santos.pdf"
+          href="/files/Resume Victor Santos.pdf"
           target="_blank"
           // rel="noreferrer"
           className="no-underline"

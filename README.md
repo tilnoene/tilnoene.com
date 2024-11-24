@@ -1,7 +1,7 @@
 # tilnoene.com
 > My personal website
 
-93.7% inspired by [@zenorocha](https://github.com/zenorocha).
+**93.7%** inspired by [@zenorocha](https://github.com/zenorocha).
 
 ## Technology stack
 - **Front-end:** [React](https://react.dev/)
