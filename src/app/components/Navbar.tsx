@@ -24,25 +24,24 @@ export default function Navbar() {
               const path = page === 'Home' ? '/' : `/${page.toLowerCase()}`
 
               return (
-                <li key={page} className="hover:bg-hover transition-colors py-2.5 px-4 rounded cursor-pointer flex items-center relative">
-                  <Link
-                    href={path}
-                    passHref
-                    className={`uppercase font-body no-underline text-xs mt-0.5 ${
-                      currentPathname === path
-                        ? 'text-primary'
-                        : 'text-secondary'
-                    }`}
-                  >
+                <Link
+                  key={page}
+                  href={path}
+                  passHref
+                  className={`uppercase font-body no-underline text-xs mt-0.5 ${
+                    currentPathname === path ? 'text-primary' : 'text-secondary'
+                  }`}
+                >
+                  <li className="hover:bg-hover transition-colors py-2.5 px-4 rounded cursor-pointer flex items-center relative">
                     {page}
-                  </Link>
 
-                  {currentPathname === path && (
-                    <div className="absolute w-full h-[1px] bottom-1.5 left-0 flex justify-center">
-                      <div className="w-5 h-[1px] bg-primary" />
-                    </div>
-                  )}
-                </li>
+                    {currentPathname === path && (
+                      <div className="absolute w-full h-[1px] bottom-1.5 left-0 flex justify-center">
+                        <div className="w-5 h-[1px] bg-primary" />
+                      </div>
+                    )}
+                  </li>
+                </Link>
               )
             })}
           </ul>
