@@ -24,7 +24,7 @@ export default function Navbar() {
               const path = page === 'Home' ? '/' : `/${page.toLowerCase()}`
 
               return (
-                <li key={page} className="hover:bg-hover transition-colors py-3 px-4 rounded cursor-pointer flex items-center relative">
+                <li key={page} className="hover:bg-hover transition-colors py-2.5 px-4 rounded cursor-pointer flex items-center relative">
                   <Link
                     href={path}
                     passHref
