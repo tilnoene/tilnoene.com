@@ -67,7 +67,7 @@ export const education: Education[] = [
   {
     title: "Bachelor's, Computer Science",
     universityName: 'University of Brasília',
-    universityUrl: 'TODO',
+    universityUrl: 'https://international.unb.br/',
     startDate: '2020-06-01',
     endDate: '2025-06-01',
     location: 'Brasília, Brazil',
